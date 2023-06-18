@@ -4,7 +4,7 @@
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
     <ConstraintSet android:id="@+id/start">
-        <Constraint android:id="@id/tvHello">
+        <Constraint android:id="@id/layoutHeader">
             <Layout
                 android:layout_width="0dp"
                 android:layout_height="200dp"
@@ -16,11 +16,11 @@
 
     <ConstraintSet android:id="@+id/end">
         <Constraint
-            android:id="@id/tvHello"
+            android:id="@id/layoutHeader"
             motion:motionProgress="1">
             <Layout
                 android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -35,7 +35,7 @@
 
         <OnSwipe
             motion:dragDirection="dragUp"
-            motion:touchAnchorId="@id/tvHello"
+            motion:touchAnchorId="@id/layoutHeader"
             motion:touchAnchorSide="bottom" />
 
     </Transition>

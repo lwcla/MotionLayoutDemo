@@ -8,17 +8,9 @@
     app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tvHello"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:background="@color/black"
-        android:gravity="center"
-        android:text="Hello World!"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/layout_header" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvData"
@@ -28,6 +20,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvHello" />
+        app:layout_constraintTop_toBottomOf="@id/layoutHeader" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

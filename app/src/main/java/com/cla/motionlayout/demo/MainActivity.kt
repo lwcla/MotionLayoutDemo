@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView.Adapter
 class MainActivity : AppCompatActivity() {
 
     private val motionLayout by lazy { findViewById<MotionLayout>(R.id.motionLayout) }
-    private val tvHello by lazy { findViewById<TextView>(R.id.tvHello) }
+//    private val tvHello by lazy { findViewById<TextView>(R.id.tvHello) }
     private val rvData by lazy { findViewById<RecyclerView>(R.id.rvData) }
 
 
@@ -24,9 +24,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        tvHello.setOnClickListener {
-//            motionLayout.transitionToEnd()
-        }
 
         val dataList = mutableListOf<String>()
         for (i in 0..100) {
