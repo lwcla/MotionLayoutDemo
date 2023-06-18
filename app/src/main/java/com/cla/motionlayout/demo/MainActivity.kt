@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity() {
             val tv = TextView(context).also {
                 it.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
                 it.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14f)
-                it.setTextColor(Color.BLACK)
                 it.gravity = Gravity.CENTER
                 context.apply {
                     it.setPadding(0, 14.dp, 0, 14.dp)
@@ -64,7 +63,8 @@ class MainActivity : AppCompatActivity() {
 
             fun bind(text: String, position: Int) {
                 tv.text = text
-                tv.setBackgroundColor(if (position % 2 == 0) Color.BLUE else Color.GREEN)
+                tv.setBackgroundColor(if (position % 2 == 0) Color.WHITE else Color.BLACK)
+                tv.setTextColor(if (position % 2 == 0) Color.BLACK else Color.WHITE)
             }
         }
     }
